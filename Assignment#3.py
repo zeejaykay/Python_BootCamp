@@ -4,7 +4,7 @@ import turtle    #importing turtle library
 
 
 class Shape():
-    def __init__(self,):
+    def __init__(self):
         self.turtle=turtle.Pen()     #Making a turtle object.
 
     def draw(self):
