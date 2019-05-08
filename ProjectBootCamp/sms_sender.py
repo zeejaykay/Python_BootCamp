@@ -36,16 +36,18 @@ class SmsSender:
 
 
 
-SmsSender=SmsSender(sid='ACa8ac6860f1520fa28188f8f81abdfcbd',
-                    auth_token='e86382069ae4b736a56eabb463f99dce',
+SmsSender=SmsSender(sid='ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+                    auth_token='your_auth_token', #enter the auth_token you would get from twilio's website.
                     from_number='+12014845940'
                     )
 
 "Creating a sms sender programm for a general user"
 
 while(True):
+    
     print("\n Bulk SMS sender\n")
     print("Please enter the message text & the message recipient's number in a +xxxxxxx format\n") # displaying instructions
+    
     msg_txt= input("Please enter the message text:\n")
     num_1 = input("Please enter the recipient number:\n")  # taking input from user
     # error checking for invalid number entry
@@ -57,6 +59,7 @@ while(True):
         continue
 
     recipent_number='+'+ recipent_number[1:]
+    
     SmsSender.send(to_number=recipent_number, msg_text=msg_txt) # passing argument to send method of SmsSender class
 
     # Asking user whether he wants to continue using calculator
