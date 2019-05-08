@@ -30,7 +30,7 @@ class SmsSender:
         "printing sid of message to check whether the message was sent or not"
         print('message sent successfully ' + message.sid)
 
-#=======================================================================
+#======================================================================
 
 "initializing and creating SmsSender Class object by giving it sid, auth_token and from number"
 
